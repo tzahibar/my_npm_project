@@ -25,6 +25,7 @@ jobs:
       - id: foo
         uses: tzahibar/npm_action@main
         with:
+          version: '1.0.0'
           deployer: 'tzahi_npm_test'
           resolver: 'tzahi_npm_remote_test'
           build_name: 'test'
