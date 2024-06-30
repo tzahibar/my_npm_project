@@ -27,3 +27,9 @@ jobs:
         with:
           deployer: 'tzahi_npm_test'
           resolver: 'tzahi_npm_remote_test'
+          build_name: 'test'
+          build_number: '1.0.0'
+          server_id: 'ghplay'
+          rt_url: ${{ secrets.ARTIFACTORY_URL }}
+          rt_access_token: ${{ secrets.ARTIFACTORY_ACCESS_TOKEN }}
+          user: 'admin'
