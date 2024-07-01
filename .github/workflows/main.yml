@@ -18,7 +18,10 @@ jobs:
           JF_ACCESS_TOKEN: ${{ secrets.ARTIFACTORY_ACCESS_TOKEN }}
 
       - name: jf config show
-        run: jf c show
+        run: |
+          export JFROG_CLI_LOG_LEVEL=DEBUG
+          jf rt dl tzahi_npm_virtual_test/my_npm_project/-/my_npm_project-1.0.0.tgz
+          jf c show
 
       - name : Setup Node.js
         uses: actions/setup-node@v4
