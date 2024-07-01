@@ -17,6 +17,9 @@ jobs:
           JF_URL: ${{ secrets.ARTIFACTORY_URL }}
           JF_ACCESS_TOKEN: ${{ secrets.ARTIFACTORY_ACCESS_TOKEN }}
 
+      - name: jf config show
+        run: jf c show
+
       - name : Setup Node.js
         uses: actions/setup-node@v4
         with:
